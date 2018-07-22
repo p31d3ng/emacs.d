@@ -35,5 +35,4 @@
   (setq-default dimmer-fraction 0.15)
   (add-hook 'after-init-hook 'dimmer-mode))
 
-
 (provide 'init-themes)

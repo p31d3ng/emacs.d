@@ -1,6 +1,6 @@
 (require-package 'go-mode)
 (require-package 'company-go)
-(add-hook 'before-save-hook 'gofmt-before-save)
+;;(add-hook 'before-save-hook 'gofmt-before-save)
 
 (require 'go-autocomplete)
 (require 'auto-complete-config)
