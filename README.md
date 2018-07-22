@@ -11,7 +11,7 @@ go get -u github.com/dougm/goflymake
 (Make sure GOPATH and PATH are correctly set)
 Launch emacs
 
-``
+```
 
 ## Modifications
 
