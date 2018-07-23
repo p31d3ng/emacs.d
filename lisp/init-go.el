@@ -2,7 +2,7 @@
 (require-package 'company-go)
 ;;(add-hook 'before-save-hook 'gofmt-before-save)
 
-(require 'go-autocomplete)
+(require-package 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
 
