@@ -41,10 +41,11 @@
 (require 'init-preload-local nil t)
 
 ;;----------------------------------------------------------------------------
-;; Enable global-display-line-numbers-mode.
+;; Enable global-display-line-numbers-mode and set font
 ;;----------------------------------------------------------------------------
 (when (version<= "26.0.50" emacs-version )
   (global-display-line-numbers-mode))
+(set-face-attribute 'default nil :font "Monaco-12")
 
 ;;----------------------------------------------------------------------------
 ;; Load configs for specific features and modes
