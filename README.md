@@ -3,7 +3,9 @@
 ## Installation
 
 For windows, please install [Monaco Font](https://github.com/todylu/monaco.ttf) first
+
 For golang, please install golang first, otherwise comment out `init-go` from `init.el`
+
 ```
 git clone https://github.com/p31d3ng/emacs.d.git ~/.emacs.d
 go get -u github.com/mdempsky/gocode                           (macOS/Linux)
