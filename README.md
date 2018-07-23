@@ -35,5 +35,4 @@ This repo is based on [purcell/emacs.d](https://github.com/purcell/emacs.d), but
 - [ ] Erlang
 - [x] Common Lisp (with Slime)
 - [x] `Important` Golang
-- [ ] osx-keybinding cmd -> opt & disable opt
 - [x] enabled `global-display-line-number-mode` by default
