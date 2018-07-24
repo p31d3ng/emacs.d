@@ -1,0 +1,5 @@
+alias ll ls -l
+alias gst git status
+alias gaa git add -A
+alias gcmsg git commit -m $1
+alias gp git push $1
