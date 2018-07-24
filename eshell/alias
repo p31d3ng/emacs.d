@@ -1,5 +1,4 @@
 alias push-org-update git add -A && git commit -m "update" && git push -u origin master
-
 alias gp git push $1
 alias gcmsg git commit -m $1
 alias gaa git add -A
