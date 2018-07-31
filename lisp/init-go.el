@@ -5,9 +5,16 @@
 (require-package 'go-autocomplete)
 (require 'auto-complete-config)
 (ac-config-default)
-
-(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")(require 'go-flymake)
-(add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")(require 'go-flycheck)
+(if (eq system-type 'windows-nt) ;; windows $GOPATH set to C:/gopath
+  (progn
+    (add-to-list 'load-path "~/gopath/src/github.com/dougm/goflymake")(require 'go-flymake)
+    (add-to-list 'load-path "~/gopath/src/github.com/dougm/goflymake")(require 'go-flycheck)
+    )
+  (progn
+    (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")(require 'go-flymake)
+    (add-to-list 'load-path "~/go/src/github.com/dougm/goflymake")(require 'go-flycheck)
+    )
+  )
 
 (add-hook 'go-mode-hook 'company-mode)(add-hook 'go-mode-hook (lambda ()  (set (make-local-variable 'company-backends) '(company-go)) (company-mode)))
 
