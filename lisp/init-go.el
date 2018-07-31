@@ -1,5 +1,12 @@
 (require-package 'go-mode)
 (require-package 'company-go)
+
+(require-package 'flycheck-gometalinter)
+(flycheck-gometalinter-setup)
+;;(setq flycheck-gometalinter-fast t)  ;; only run fast linters
+;;(setq flycheck-gometalinter-test t)  ;; use in tests files
+(add-hook 'go-mode-hook 'flycheck-mode)
+
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 (if (eq system-type 'windows-nt) ;; windows $GOPATH set to C:/gopath
@@ -18,9 +25,9 @@
                           (set (make-local-variable 'company-backends) '(company-go))
                           (company-mode)))
 
-(add-hook 'go-mode-hook 'flycheck-mode)
+
 (add-hook 'go-mode-hook '(lambda ()
-        (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
+                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)))
 
 (add-hook 'go-mode-hook '(lambda ()
         (local-set-key (kbd "C-c C-g") 'go-goto-imports)))

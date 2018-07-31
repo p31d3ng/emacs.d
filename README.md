@@ -8,18 +8,7 @@ For golang, please install golang first, otherwise comment out `init-go` from `i
 
 ```bash
 git clone git@github.com:p31d3ng/emacs.d.git ~/.emacs.d
-
-# DEPRECATED, use company-go rather than gocode for perf considerations.
-# go get -u github.com/mdempsky/gocode                           (macOS/Linux)
-# go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    (for windows)
-
-go get -u github.com/rogpeppe/godef
-go get -u github.com/dougm/goflymake
-
-(Make sure GOPATH and PATH are correctly set)
-(For windows, $GOROOT=C:\go   $GOPATH=C:\gopath    $HOME=C:\      $PATH=$PATH;$GOPATH/bin)
 Launch emacs
-
 ```
 
 ## Modifications
@@ -37,6 +26,6 @@ This repo is based on [purcell/emacs.d](https://github.com/purcell/emacs.d), but
 - [ ] Elm
 - [ ] Erlang
 - [x] Common Lisp (with Slime)
-- [x] `Important` Golang
+- [ ] Golang `temporarily disabled`
 - [x] Disable swapping of Command and Option Key in OSX
 - [x] enabled `global-display-line-number-mode` by default
