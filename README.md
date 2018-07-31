@@ -14,7 +14,7 @@ go get -u github.com/rogpeppe/godef
 go get -u github.com/dougm/goflymake
 
 (Make sure GOPATH and PATH are correctly set)
-(For Windows, edit PATH to use absolute path rather than %GOPATH%/bin, emacs won't be able to recognize it)
+(For windows, $GOROOT=C:\go   $GOPATH=C:\gopath    $HOME=C:\)
 Launch emacs
 
 ```
