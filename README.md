@@ -6,10 +6,13 @@ For windows, please install [Monaco Font](https://github.com/todylu/monaco.ttf) 
 
 For golang, please install golang first, otherwise comment out `init-go` from `init.el`
 
-```
+```bash
 git clone git@github.com:p31d3ng/emacs.d.git ~/.emacs.d
-go get -u github.com/mdempsky/gocode                           (macOS/Linux)
-go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    (for windows)
+
+# DEPRECATED, use company-go rather than gocode for perf considerations.
+# go get -u github.com/mdempsky/gocode                           (macOS/Linux)
+# go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    (for windows)
+
 go get -u github.com/rogpeppe/godef
 go get -u github.com/dougm/goflymake
 
