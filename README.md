@@ -10,6 +10,10 @@ For golang, please install golang first, otherwise comment out `init-go` from `i
 # Install gometalinter
 go get -u github.com/alecthomas/gometalinter
 
+# Install gocode
+go get -u github.com/mdempsky/gocode    # *nix
+go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    # windows
+
 # install available checkers
 gometalinter --install --update
 
