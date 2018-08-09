@@ -7,7 +7,20 @@ For windows, please install [Monaco Font](https://github.com/todylu/monaco.ttf) 
 For golang, please install golang first, otherwise comment out `init-go` from `init.el`
 
 ```bash
+# Install gometalinter
+go get -u github.com/alecthomas/gometalinter
+
+# Install gocode
+go get -u github.com/mdempsky/gocode    # *nix
+go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    # windows
+
+# install available checkers
+gometalinter --install --update
+
+# clone git to local ~/.emacs.d
+rf -rf ~/.emacs.d
 git clone git@github.com:p31d3ng/emacs.d.git ~/.emacs.d
+
 Launch emacs
 ```
 
