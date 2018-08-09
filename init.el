@@ -116,6 +116,7 @@
 (require 'init-yaml)
 (require 'init-docker)
 (require 'init-terraform)
+(require 'init-screenshot)
 ;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
