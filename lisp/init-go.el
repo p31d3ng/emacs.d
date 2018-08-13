@@ -1,5 +1,4 @@
 (require-package 'go-mode)
-(require-package 'company-go)
 
 ;; add flyche-gometaliner to flycheck
 (require-package 'flycheck-gometalinter)
@@ -12,10 +11,10 @@
 (add-hook 'before-save-hook 'gofmt-before-save)
 
 ;; go code autocomplete
-(add-hook 'go-mode-hook 'company-mode)
-(add-hook 'go-mode-hook (lambda ()
-                          (set (make-local-variable 'company-backends) '(company-go))
-                          (company-mode)))
+(when (maybe-require-package 'company-go)
+  (after-load 'company
+    (add-hook 'go-mode-hook
+              (lambda () (sanityinc/local-push-company-backend 'company-go)))))
 
 ;; go code keybindings
 (add-hook 'go-mode-hook '(lambda ()
