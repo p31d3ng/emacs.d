@@ -6,6 +6,10 @@
 
 (when (maybe-require-package 'company)
   (add-hook 'after-init-hook 'global-company-mode)
+  (setq company-idle-delay 0.3)
+  (setq company-show-numbers t)
+  (setq company-minimum-prefix-length 2)
+  (setq company-dabbrev-downcase nil)
   (after-load 'company
     (diminish 'company-mode "CMP")
     (define-key company-mode-map (kbd "M-/") 'company-complete)
