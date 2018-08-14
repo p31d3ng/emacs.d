@@ -7,16 +7,15 @@
 (when (maybe-require-package 'company)
   (add-hook 'after-init-hook 'global-company-mode)
   (setq company-idle-delay 0.3)
-  (setq company-show-numbers t)
   (setq company-minimum-prefix-length 2)
-  (setq company-dabbrev-downcase nil)
+  (setq company-dabbqrev-downcase nil)
   (after-load 'company
     (diminish 'company-mode "CMP")
     (define-key company-mode-map (kbd "M-/") 'company-complete)
     (define-key company-active-map (kbd "M-/") 'company-other-backend)
     (define-key company-active-map (kbd "C-n") 'company-select-next)
     (define-key company-active-map (kbd "C-p") 'company-select-previous)
-    (setq-default company-dabbrev-other-buffers 'all
+    (setq-default company-dabbrev-other-buffers t
                   company-tooltip-align-annotations t))
   (global-set-key (kbd "M-C-/") 'company-complete)
   (when (maybe-require-package 'company-quickhelp)
