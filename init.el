@@ -16,6 +16,7 @@
 (defconst *spell-check-support-enabled* nil) ;; Enable with t if you prefer
 (defconst *is-a-mac* (eq system-type 'darwin))
 
+
 ;;----------------------------------------------------------------------------
 ;; Adjust garbage collection thresholds during startup, and thereafter
 ;;----------------------------------------------------------------------------
@@ -117,6 +118,7 @@
 (require 'init-docker)
 (require 'init-terraform)
 (require 'init-screenshot)
+(require 'init-tasks)
 ;;(require 'init-nix)
 (maybe-require-package 'nginx-mode)
 
