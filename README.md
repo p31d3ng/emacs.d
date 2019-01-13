@@ -8,14 +8,14 @@ For golang, please install golang first, otherwise comment out `init-go` from `i
 
 ```bash
 # Install gometalinter
-go get -u github.com/alecthomas/gometalinter
+# go get -u github.com/alecthomas/gometalinter
 
 # Install gocode
-go get -u github.com/mdempsky/gocode    # *nix
-go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    # windows
+# go get -u github.com/mdempsky/gocode    # *nix
+# go get -u -ldflags -H=windowsgui github.com/mdempsky/gocode    # windows
 
 # install available checkers
-gometalinter --install --update
+# gometalinter --install --update
 
 # clone git to local ~/.emacs.d
 rf -rf ~/.emacs.d
@@ -39,6 +39,6 @@ This repo is based on [purcell/emacs.d](https://github.com/purcell/emacs.d), but
 - [ ] Elm
 - [ ] Erlang
 - [x] Common Lisp (with Slime)
-- [x] Golang (go-mode + flycheck + go-gometalinter only, no dependencies required)
+- [ ] Golang (go-mode + flycheck + go-gometalinter only, no dependencies required)
 - [x] Disable swapping of Command and Option Key in OSX
 - [x] enabled `global-display-line-number-mode` by default
