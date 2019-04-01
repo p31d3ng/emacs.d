@@ -14,7 +14,9 @@
 (when (maybe-require-package 'company-go)
   (after-load 'company
     (add-hook 'go-mode-hook
-              (lambda () (sanityinc/local-push-company-backend 'company-go)))))
+      (lambda ()
+        (set (make-local-variable 'company-backends) '(company-go))
+        (company-mode)))))
 
 ;; go code keybindings
 (add-hook 'go-mode-hook '(lambda ()
