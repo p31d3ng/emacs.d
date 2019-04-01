@@ -39,6 +39,6 @@ This repo is based on [purcell/emacs.d](https://github.com/purcell/emacs.d), but
 - [ ] Elm
 - [ ] Erlang
 - [x] Common Lisp (with Slime)
-- [ ] Golang (go-mode + flycheck + go-gometalinter only, no dependencies required)
+- [x] Golang (go-mode + flycheck + go-gometalinter only, no dependencies required)
 - [x] Disable swapping of Command and Option Key in OSX
 - [x] enabled `global-display-line-number-mode` by default
