@@ -1,3 +1,7 @@
+;;; init-python.el --- Python editing -*- lexical-binding: t -*-
+;;; Commentary:
+;;; Code:
+
 (setq auto-mode-alist
       (append '(("SConstruct\\'" . python-mode)
                 ("SConscript\\'" . python-mode))
@@ -12,8 +16,9 @@
     (add-hook 'python-mode-hook (lambda () (setq-local flycheck-python-pylint-executable "python3"))))
   (when (maybe-require-package 'company-anaconda)
     (after-load 'company
-      (add-hook 'python-mode-hook
-                (lambda () (sanityinc/local-push-company-backend 'company-anaconda))))))
+      (after-load 'python
+        (push 'company-anaconda company-backends)))))
 
 
 (provide 'init-python)
+;;; init-python.el ends here
