@@ -13,10 +13,7 @@
 ;; go code autocomplete
 (when (maybe-require-package 'company-go)
   (after-load 'company
-    (add-hook 'go-mode-hook
-      (lambda ()
-        (set (make-local-variable 'company-backends) '(company-go))
-        (company-mode)))))
+    (push 'company-go company-backends)))
 
 ;; go code keybindings
 (add-hook 'go-mode-hook '(lambda ()
