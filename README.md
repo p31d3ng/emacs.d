@@ -28,6 +28,9 @@ go get -u -v github.com/davidrjenni/reftools/cmd/fillstruct
 go get -u -v github.com/alecthomas/gometalinter
 gometalinter --install
 
+# Install JS Prettier (Optional)
+npm i -g prettier
+
 # clone git to local ~/.emacs.d
 rm -rf ~/.emacs.d
 git clone git@github.com:p31d3ng/emacs.d.git ~/.emacs.d

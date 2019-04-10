@@ -33,6 +33,8 @@
 
   (add-hook 'js2-mode-hook (lambda () (setq mode-name "JS2")))
 
+  (add-hook 'js2-mode-hook 'prettier-js-mode)
+
   (js2-imenu-extras-setup))
 
 (setq-default js-indent-level 2)
